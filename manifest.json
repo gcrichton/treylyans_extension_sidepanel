@@ -1,9 +1,9 @@
 {
     "update_url": "https://clients2.google.com/service/update2/crx",
-    "description": "A chrome extension that allows you easy access to Treylyans from your browser's sidebar.",
+    "description": "A chrome extension that opens Treylyans in the Chrome sidepanel.",
     "version": "0.1",
     "manifest_version": 3,
-    "name": "SideTreylyans - run Treylyans on your browser's sidebar",
+    "name": "SideTreylyans - run Treylyans on your browser's sidepanel",
     "background": {
         "service_worker": "background.bundle.js"
     },
