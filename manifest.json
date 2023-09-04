@@ -1,0 +1,35 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "description": "A chrome extension that allows you easy access to Treylyans from your browser's sidebar.",
+    "version": "0.1",
+    "manifest_version": 3,
+    "name": "SideTreylyans - run Treylyans on your browser's sidebar",
+    "background": {
+        "service_worker": "background.bundle.js"
+    },
+    "action": {
+        "default_title": "Click to open panel"
+    },
+    "side_panel": {
+        "default_path": "panel.html",
+        "openPanelOnActionClick": true
+    },
+    "icons": {
+        "128": "treylyans128.png"
+    },
+    "web_accessible_resources": [{
+        "resources": ["content.styles.css", "treylyans128.png", "treylyans32.png"],
+        "matches": []
+    }],
+    "host_permissions": ["http://*/*", "https://*/*"],
+    "permissions": ["sidePanel", "declarativeNetRequest", "declarativeNetRequestWithHostAccess", "declarativeNetRequestFeedback"],
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+K",
+                "mac": "Command+K"
+            },
+            "description": "Run \"SideTreylyans\" on the current page."
+        }
+    }
+}
